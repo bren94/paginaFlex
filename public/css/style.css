@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+selector {
+    propiedad: valor;
+}
+SI LLAMO UNA CLASE= .nombredeclase 
+SI LLAMO UNA ETIQUETA = p , h2, h1
+SI LLAMO A UN ID = #nombredeID 
+SI QUIERO MODIFICAR A TODOS LOS ELEMENTOS = SELECTOR UNIVERSAL > *
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.bitter-<uniquifier> {
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+/*PALETA DE COLORES
+color:  #FFDCCC;
+color: #FFF9EC;
+color : #5D2A42;
+color: #FCB1A6;
+*/
+/* estilos comunes para todo el documento */
+* {
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  background-color: #FFDCCC;
+  height: 100vh;
+}
+img {
+  border-radius: 15px;
+}
+/* estilos header */
+header {
+  padding: 60px;
+  text-align: center;
+  background-image: url('../img/headerimg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header div {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(0,0,0,0.4);
+  color: #FFF9EC;
+  font-size: 1.1rem;
+}
+@media (max-width: 800px) {
+  header {
+    background-position: center;
+  }
+}
+/* estilos navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #5D2A42;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar a{
+  color: #FFF9EC;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.navbar a:hover{
+  background-color: #FCB1A6;
+  color: #5D2A42;
+}
+@media (max-width:800px) {
+  .navbar {
+    flex-direction: column;
+    position: unset;
+  }
+  .navbar a {
+    text-align: center;
+  }
+}
+/* estilo parte principal */
+.principal {
+  display: flex;
+  flex-wrap: wrap;
+}
+aside {
+  flex-basis: 25%;
+  background-color: #FCB1A6;
+  text-align: center;
+  padding: 10px;
+}
+main {
+  flex-basis: 75%;
+  background-color: #FFF9EC;
+  padding: 20px;
+  padding-left: 40px;
+}
+@media (max-width:800px) {
+  .principal {
+    flex-direction: column;
+  }
+}
+/* estilos aside */
+.image img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  transition: 0.5s all ease-in-out;
+}
+.image:hover img{
+  transform: scale(1.07);
+}
+.asideTitle {
+  text-decoration: underline;
+}
+@media (max-width:800px) {
+  .image img {
+    width: 60%;
+    height: auto;
+  }
+}
+/* estilos main */
+main h2 {
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #5D2A42;
+  text-align: center;
+}
+main h5 {
+  text-align: right;
+}
+main p{
+  font-style: italic;
+}
+main img {
+  width: 100%;
+  object-fit: cover;
+}
+main .leerMas {
+  background-color: #5D2A42;
+  color: #FFF9EC;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  width: fit-content;
+}
+main .leerMas:hover {
+  background-color: #FCB1A6;
+  color: #5D2A42;
+}
+.verMas {
+  display: block;
+  background-color: #5D2A42;
+  color: #FFF9EC;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.verMas:hover{
+  background-color: #FCB1A6;
+  color: #5D2A42;
+}
+/* estilos footer */
+footer {
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  color: #FCB1A6;
+}
+/* estilos formulario */
+form {
+  padding: 50px;
+  background-color: #FFF9EC;
+  text-align: center;
+  height: 100%;
+}
+label {
+  background-color: #5D2A42;
+  color: #FFF9EC;
+  padding: 15px;
+  border-radius: 10px;
+}
+fieldset {
+  display: grid;
+  grid-template-columns: 40vw 30vw;
+  gap: 15px;
+  margin: auto;
+  width: fit-content;
+  font-size: 1.2rem;
+}
+@media (max-width:800px) {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+}
+legend {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+/* Estilos recetas */
+.container-fluid {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+.receta {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #FFF9EC;
+}
+.receta-iframe iframe {
+  width: 100%;
+  height: 50vh;
+}
+.receta img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+.carousel-item img {
+  width: 90%;
+  height: 500px;
+  object-fit: cover;
+}
+@media (max-width:800px) {
+.carousel-item img {
+  object-fit: contain;
+  height: auto;
+}
+.carousel-inner {
+  object-fit: contain;
+}
+}
+
+/* Estilos cartas */
+.card-img-top {
+  height: 400px;
+  object-fit: cover;
+}
+.card-title {
+  text-align: unset;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
